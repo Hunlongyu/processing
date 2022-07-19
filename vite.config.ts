@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { join } from 'path'
+import { join, resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import electron from 'vite-plugin-electron'
@@ -32,5 +32,14 @@ export default defineConfig({
       },
       renderer: {}
     })
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'src/renderer/views/about'),
+        print: resolve(__dirname, 'src/renderer/views/print')
+      }
+    }
+  }
 })
