@@ -5,9 +5,10 @@
   "main": "dist/main/index.js",
   "scripts": {
     "dev": "vite",
+    "bd": "vite build && electron-builder",
     "build": "vue-tsc --noEmit && vite build && electron-builder",
-    "bd": "vue-tsc --noEmit && vite build",
-    "eb": "electron-builder"
+    "postinstall": "electron-builder install-app-deps",
+    "rebuild": "electron-rebuild -f -w better-sqlite3"
   },
   "keywords": [
     "vite3",
@@ -22,6 +23,7 @@
     "electron": "^19.0.8",
     "electron-builder": "^23.1.0",
     "electron-devtools-installer": "^3.2.0",
+    "electron-rebuild": "^3.2.8",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
@@ -35,5 +37,9 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.6.2",
+    "knex": "^2.2.0"
   }
 }

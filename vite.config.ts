@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { join, resolve } from 'path'
+import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import electron from 'vite-plugin-electron'
@@ -16,17 +16,6 @@ export default defineConfig({
           build: {
             sourcemap: 'inline',
             outDir: 'dist/main'
-          }
-        }
-      },
-      preload: {
-        input: {
-          index: join(__dirname, 'src/preload/index.ts')
-        },
-        vite: {
-          build: {
-            sourcemap: 'inline',
-            outDir: 'dist/preload'
           }
         }
       },

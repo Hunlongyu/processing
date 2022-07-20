@@ -1,9 +1,12 @@
 'use strict'
 
 import { app, BrowserWindow } from 'electron'
-import installExtension, { VUEJS3_DEVTOOLS } from 'electron-devtools-installer'
 import win from './router'
 // import './events'
+import './database'
+// import knex from './database'
+// const cost = await knex('cost')
+// console.log('=== cost ===', cost)
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
 const isDevelopment = process.env.NODE_ENV !== 'production'
@@ -24,15 +27,8 @@ app.on('second-instance', () => {
   win.open('main')
 })
 
-app.whenReady().then(async () => {
-  if (app.isPackaged) {
-    try {
-      await installExtension(VUEJS3_DEVTOOLS)
-    } catch (err) {
-      console.log('=== err ===', err)
-    }
-  }
-  win.open('about')
+app.on('ready', () => {
+  win.open('main')
 })
 
 if (isDevelopment) {
