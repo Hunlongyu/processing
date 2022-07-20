@@ -18,6 +18,6 @@ app.whenReady().then(() => {
     const filePath = join(path, 'index.html')
     win.loadFile(filePath)
   } else {
-    win.loadURL('http://127.0.0.1:5173/src/renderer/views/about/index.html')
+    win.loadURL('http://127.0.0.1:5173/index.html')
   }
 })

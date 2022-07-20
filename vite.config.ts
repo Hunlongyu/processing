@@ -37,8 +37,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'src/renderer/views/about'),
-        print: resolve(__dirname, 'src/renderer/views/print')
+        about: resolve(__dirname, 'pages/about.html'),
+        print: resolve(__dirname, 'pages/print.html')
       }
     }
   }
