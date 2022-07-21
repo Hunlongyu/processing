@@ -1,6 +1,7 @@
 import { ipcMain } from 'electron'
 import win from '../router'
 
-ipcMain.handle('win.open.about', () => {
-  win.open('about')
+ipcMain.handle('event.win.open', (e, w: string) => {
+  console.log('=== e ===', w)
+  win.open(w)
 })

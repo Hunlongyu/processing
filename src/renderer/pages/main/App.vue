@@ -12,7 +12,7 @@ import { ipcRenderer } from 'electron'
 console.log('=== main ===')
 
 function openWin(win: string) {
-  ipcRenderer.invoke(`win.open.${win}`)
+  ipcRenderer.invoke('event.win.open', win)
 }
 </script>
 

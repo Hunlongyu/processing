@@ -30,7 +30,7 @@ const config: BWConfig = {
     autoHideMenuBar: true
   },
   print: {
-    frame: false,
+    frame: true,
     width: isDev ? 1680 : 800,
     height: 1000,
     resizable: false

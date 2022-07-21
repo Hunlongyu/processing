@@ -11,6 +11,11 @@ server                    -   后台模拟
   |_  websocket           -   mock server
 src                       -   业务代码
   |-  main                -   主进程
+        |-  client        -   websocket 与后台通信
+        |-  database      -   操作数据库
+        |-  events        -   主进程与渲染进程通信
+        |-  router        -   窗口管理
+        |-  utils         -   主进程工具类
   |-  preload             -   preload
   |_  rederer             -   渲染进程
         |-  assets        -   资源目录
