@@ -2,8 +2,8 @@
 
 import { app, BrowserWindow } from 'electron'
 import win from './router'
-// import './events'
-import './database'
+import './events'
+// import './database'
 // import knex from './database'
 // const cost = await knex('cost')
 // console.log('=== cost ===', cost)

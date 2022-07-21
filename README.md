@@ -6,7 +6,9 @@
 dist                      -   开发中间产物
 node_modules              -   依赖库
 public                    -   静态资源文件夹
-server                    -   后台模拟 server
+server                    -   后台模拟
+  |-  databas             -   开发时测试用的数据库
+  |_  websocket           -   mock server
 src                       -   业务代码
   |-  main                -   主进程
   |-  preload             -   preload
