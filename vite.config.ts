@@ -15,7 +15,7 @@ export default defineConfig({
         entry: 'src/main/index.ts',
         vite: {
           build: {
-            sourcemap: 'inline',
+            sourcemap: false,
             outDir: 'dist/main'
           }
         }

@@ -1,4 +1,4 @@
-import { BrowserWindow, BrowserWindowConstructorOptions } from 'electron'
+import { app, BrowserWindow, BrowserWindowConstructorOptions } from 'electron'
 import { join } from 'path'
 import WinConfig from './config'
 
@@ -92,9 +92,8 @@ class Router {
 async function createWindow(name: string, config?: BrowserWindowConstructorOptions): Promise<BrowserWindow> {
   const _config = Object.assign(WinConfig.default, WinConfig[name], config)
   const win = new BrowserWindow(_config)
-  const isDev = process.env.NODE_ENV !== 'production'
 
-  if (!isDev) {
+  if (app.isPackaged) {
     const path = name === 'main' ? '../index.html' : `../index_${name}.html`
     const filePath = join(__dirname, path)
     win.loadFile(filePath)

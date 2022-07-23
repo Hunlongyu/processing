@@ -1,6 +1,4 @@
-import { BrowserWindowConstructorOptions } from 'electron'
-
-const isDev = process.env.NODE_ENV !== 'production'
+import { app, BrowserWindowConstructorOptions } from 'electron'
 
 interface BWConfig {
   [type: string]: BrowserWindowConstructorOptions
@@ -16,7 +14,7 @@ const config: BWConfig = {
   },
   main: {
     frame: true,
-    width: isDev ? 1800 : 1600,
+    width: app.isPackaged ? 1600 : 1800,
     height: 900,
     minWidth: 1600,
     minHeight: 900,
@@ -24,16 +22,20 @@ const config: BWConfig = {
   },
   about: {
     frame: true,
-    width: isDev ? 1180 : 580,
+    width: app.isPackaged ? 580 : 1600,
     height: 400,
-    resizable: !!isDev,
+    minWidth: 580,
+    minHeight: 400,
+    resizable: true,
     autoHideMenuBar: true
   },
   print: {
     frame: true,
-    width: isDev ? 1680 : 800,
+    width: app.isPackaged ? 800 : 1600,
     height: 900,
-    resizable: !!isDev,
+    minWidth: 800,
+    minHeight: 900,
+    resizable: true,
     autoHideMenuBar: true
   }
 }
