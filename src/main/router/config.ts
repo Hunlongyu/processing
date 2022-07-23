@@ -26,14 +26,14 @@ const config: BWConfig = {
     frame: true,
     width: isDev ? 1180 : 580,
     height: 400,
-    resizable: false,
+    resizable: !!isDev,
     autoHideMenuBar: true
   },
   print: {
     frame: true,
     width: isDev ? 1680 : 800,
     height: 1000,
-    resizable: false
+    resizable: !!isDev
   }
 }
 

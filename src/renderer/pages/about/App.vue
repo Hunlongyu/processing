@@ -1,10 +1,15 @@
 <template>
   <div>about</div>
-  <div><a href="/index.html">index</a></div>
+  <button @click="openWin">open main</button>
 </template>
 
 <script setup lang="ts">
+import { ipcRenderer } from 'electron'
+
 console.log('=== about ===')
+function openWin() {
+  ipcRenderer.invoke('event.win.open', 'main')
+}
 </script>
 
 <style lang="scss">

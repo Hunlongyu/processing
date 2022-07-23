@@ -1,6 +1,5 @@
 <template>
   <div>print</div>
-  <div><a href="/index.html">index</a></div>
 </template>
 
 <script setup lang="ts">
