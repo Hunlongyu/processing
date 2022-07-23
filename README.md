@@ -21,8 +21,11 @@ src                       -   业务代码
         |-  assets        -   资源目录
         |-  components    -   全局组件
         |-  utis          -   工具类
-        |_  views         -   多页面
+        |_  pages         -   多页面
           |-  about       -   关于页面
           |-  print       -   打印页面
           |_  main        -   主界面
+index.html                -   主页面
+index_about               -   关于页面
+index_print               -   打印页面
 ```

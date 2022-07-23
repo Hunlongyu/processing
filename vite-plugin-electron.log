@@ -40,3 +40,57 @@
   The main field in package.json may be incorrect, which causes the App to fail to start.
   File build path: "E:\github\processing\dist\main\index.js".
   Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/22 19:50:22]
+  Command: "vite serve".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/22 19:50:37]
+  Command: "vite serve".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/23 15:25:29]
+  Command: "vite serve".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/23 15:25:45]
+  Command: "vite serve".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/23 15:27:55]
+  Command: "vite serve".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/23 15:29:26]
+  Command: "vite build".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/23 15:34:12]
+  Command: "vite serve".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/23 15:35:48]
+  Command: "vite serve".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".
+
+[2022/7/23 15:36:41]
+  Command: "vite build".
+  The main field in package.json may be incorrect, which causes the App to fail to start.
+  File build path: "E:\github\processing\dist\main\index.js".
+  Recommended main value: "E:\github\processing\dist\main\index.js".

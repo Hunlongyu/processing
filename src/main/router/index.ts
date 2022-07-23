@@ -93,13 +93,13 @@ async function createWindow(name: string, config?: BrowserWindowConstructorOptio
   const _config = Object.assign(WinConfig.default, WinConfig[name], config)
   const win = new BrowserWindow(_config)
 
-  const path = name === 'main' ? '../index.html' : `../pages/${name}.html`
+  const path = name === 'main' ? '../index.html' : `../index_${name}.html`
 
   if (app.isPackaged) {
     const filePath = join(__dirname, path)
     win.loadFile(filePath)
   } else {
-    const url = name === 'main' ? 'index.html' : `pages/${name}.html`
+    const url = name === 'main' ? 'index.html' : `index_${name}.html`
     await win.loadURL(`http://127.0.0.1:5173/${url}`)
     win.webContents.openDevTools()
   }
