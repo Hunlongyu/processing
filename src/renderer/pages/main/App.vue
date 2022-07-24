@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { ipcRenderer } from 'electron'
 
 console.log('=== main ===')
@@ -12,6 +13,12 @@ console.log('=== main ===')
 function openWin(win: string) {
   ipcRenderer.invoke('event.win.open', win)
 }
+
+onMounted(() => {
+  ipcRenderer.on('argv', (e, msg) => {
+    console.log('=== msg ===', msg)
+  })
+})
 </script>
 
 <style lang="scss">

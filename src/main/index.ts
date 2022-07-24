@@ -22,8 +22,12 @@ app.on('second-instance', () => {
   win.open('main')
 })
 
-app.on('ready', () => {
-  win.open('main')
+app.on('ready', async () => {
+  const window = await win.open('main')
+  const argv = process.argv
+  window.webContents.on('did-finish-load', () => {
+    window.webContents.send('argv', argv)
+  })
 })
 
 const isDev = process.env.NODE_ENV !== 'production'
