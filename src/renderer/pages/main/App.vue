@@ -1,11 +1,12 @@
 <template>
-  <div>app</div>
-  <div><button @click="openWin('about')">open about window</button></div>
-  <div><button @click="openWin('print')">open print window</button></div>
+  <n-config-provider>
+    <n-message-provider>
+      <Home />
+    </n-message-provider>
+  </n-config-provider>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import { ipcRenderer } from 'electron'
 
 console.log('=== main ===')
