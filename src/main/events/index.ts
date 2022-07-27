@@ -1,7 +1,10 @@
 import { ipcMain } from 'electron'
-import win from '../router'
+import router from '../router'
 
-ipcMain.handle('event.win.open', (e, w: string) => {
-  console.log('=== e ===', w)
-  win.open(w)
+ipcMain.handle('event.win.open', (e, name: string) => {
+  router.open(name)
+})
+
+ipcMain.handle('event.win.handle', async (event, handle: 'mini' | 'max' | 'close' | 'closeAll', name?: string) => {
+  router[handle](name)
 })

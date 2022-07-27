@@ -1,5 +1,5 @@
 <template>
-  <n-config-provider>
+  <n-config-provider :theme-overrides="themeOverrides">
     <n-message-provider>
       <Home />
     </n-message-provider>
@@ -8,8 +8,13 @@
 
 <script setup lang="ts">
 import { ipcRenderer } from 'electron'
+import { GlobalThemeOverrides } from 'naive-ui'
 
 console.log('=== main ===')
+
+const themeOverrides: GlobalThemeOverrides = {
+  common: {}
+}
 
 function openWin(win: string) {
   ipcRenderer.invoke('event.win.open', win)
@@ -23,7 +28,10 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-#app {
-  color: #000;
+html,
+body,
+#app,
+.n-config-provider {
+  height: 100%;
 }
 </style>

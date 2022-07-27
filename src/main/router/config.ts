@@ -13,7 +13,7 @@ const config: BWConfig = {
     }
   },
   main: {
-    frame: true,
+    frame: false,
     width: app.isPackaged ? 1600 : 1800,
     height: 900,
     minWidth: 1600,
