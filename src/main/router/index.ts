@@ -98,8 +98,3 @@ class Router {
 }
 
 export default new Router()
-
-// export type routerType = keyof InstanceType<typeof Router>
-// export type routerType = keyof Router
-
-// const test: routerType = 'close'
