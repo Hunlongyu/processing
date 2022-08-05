@@ -3,6 +3,8 @@
 import { app } from 'electron'
 import win from './router'
 import './events'
+import { lib } from './utils/index'
+console.log('=== lib 2 ===', lib)
 // import './database'
 // import knex from './database'
 // const cost = await knex('cost')

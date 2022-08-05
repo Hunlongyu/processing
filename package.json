@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "better-sqlite3": "^7.6.2",
+    "ffi-cross": "^5.0.11",
     "knex": "^2.2.0"
   }
 }
